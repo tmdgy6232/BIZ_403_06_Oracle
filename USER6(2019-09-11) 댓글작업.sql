@@ -26,3 +26,13 @@ select * from tbl_reply;
         set replycnt =0;
         commit;
         select replycnt from tbl_board;
+        
+        update tbl_board
+        set viewcnt = viewcnt +1
+        where bno = 364;
+        
+        select * from tbl_board;
+        
+        INSERT INTO tbl_board(bno, content, writer, title)
+	values(seq_board.nextval, '하하하', '하하', '하하');
+        
